@@ -1,0 +1,345 @@
+/* VARIABLES DE COLOR */
+:root {
+    --primary: #1D42F2;
+    --primary-light: #1D85F2;
+    --accent: #2D1B4A;
+    --background: #F5F5F5;
+    --text-dark: #2D1B4A;
+    --text-light: #ffffff;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--background);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* HEADER */
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 120px;
+    background-color: var(--background);
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+    padding-top: 20px;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+      
+
+}
+
+.logo {
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* HERO FULLSCREEN */
+.hero-full {
+    height: 100vh;
+    background: url('assets/img/AgentesimagenHero.jpg') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  
+}
+
+.hero-full::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    background: rgba(45, 27, 74, 0.6);
+    /* Overlay violeta oscuro */
+}
+
+.hero-overlay {
+    position: relative;
+    z-index: 1;
+    color: var(--text-light);
+    text-align: center;
+    padding: 0 20px;
+    max-width: 800px;
+}
+
+.hero-overlay h2 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.hero-overlay p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #eee;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+.btn-primary,
+.btn-secondary {
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--text-light);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-light);
+}
+
+.btn-secondary {
+    background-color: #e0e0e0;
+    color: var(--accent);
+}
+
+.btn-secondary:hover {
+    background-color: #ccc;
+}
+
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 15px;
+  
+    
+}
+
+#indice ol {
+  padding-left: 120px;
+  font-size: 24px;
+  color: var(--primary);
+
+  
+}
+
+
+#indice a {
+  text-decoration: none;
+  color: var(--primary-light);
+  font-weight: 600;
+}
+
+#indice a:hover {
+  text-decoration: underline;
+}
+/* LISTA ORDENADA PERSONALIZADA */
+.custom-list {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  counter-reset: item;
+  list-style: none;
+}
+
+.custom-list li {
+  counter-increment: item;
+  margin-bottom: 15px;
+  padding-left: 40px;
+  position: relative;
+  font-size: 1.1em;
+  color: var(--accent);
+}
+
+.custom-list li::before {
+  content: counter(item) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.custom-list a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.custom-list a:hover {
+  color: var(--primary-light);
+  text-decoration: underline;
+}
+
+
+/* TARJETAS (CARDS) */
+.btn-primary {
+  background-color: #1D85F2;
+  border-color: #1D85F2;
+}
+
+.btn-primary:hover {
+  background-color: #1D42F2;
+  border-color: #1D42F2;
+}
+
+.card-title {
+  color: #1D42F2;
+}
+
+
+
+/* VIDEO SECTION */
+.video-section h2 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: var(--primary);
+    text-align: center;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* RECURSOS */
+.resources-section h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.resources-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.resources-section li {
+    margin-bottom: 10px;
+}
+
+.resources-section a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.resources-section a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+.footer {
+    background-color: var(--accent);
+    color: var(--text-light);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+.resource-section {
+  background: url('assets/img/recursos.jpg') center/cover no-repeat;
+  position: relative;
+  color: white;
+}
+
+.resource-overlay {
+  background: var(--text-dark); 
+  padding: 60px 0;
+}
+
+.resource-section a {
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.resource-section a:hover {
+  color: var(--primary-light);
+}
+
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+    .cards-section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero-overlay h2 {
+        font-size: 3.2em;
+    }
+
+    .hero-overlay p {
+        font-size: 1.3em;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
